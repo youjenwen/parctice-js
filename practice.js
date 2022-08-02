@@ -88,3 +88,20 @@ console.log(result);
 //     { name: "Bob", age: 30 },
 //   ],
 // ];
+
+array.forEach(function (item) {
+  // console.log(item)
+});
+let firstArr = 0;
+let arrayMax = array.filter(function(item,index,arr){
+  //  console.log(arr[0].age)
+  firstArr = arr[0].age;
+  if(firstArr < item.age){
+    console.log(item.age);
+    
+    
+    return firstArr = item.age;
+  }
+})
+console.log(arrayMax);
+
