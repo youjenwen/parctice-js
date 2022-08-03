@@ -73,7 +73,7 @@ resultC.filter(function (item) {
 });
 result.push(resultD);
 result.push(resultE);
-// console.log(result);
+console.log(result);
 
 // [
 //   [{ name: "Irving", age: 23 }],
@@ -88,17 +88,20 @@ result.push(resultE);
 //     { name: "Bob", age: 30 },
 //   ],
 // ];
-//方法二
-let noRepeat = resultMap.filter(function (item, index, arr) {
-  return arr.indexOf(item) === index;
-})
-// console.log(noRepeat); 
-console.log(noRepeat.length)
 
-let group = noRepeat.map(function(age){
-  let arrAge = array.filter(function(item){
-    return item.age === age;
-  })
-  return arrAge;
+array.forEach(function (item) {
+  // console.log(item)
 });
-console.log(group);
+let firstArr = 0;
+let arrayMax = array.filter(function(item,index,arr){
+  //  console.log(arr[0].age)
+  firstArr = arr[0].age;
+  if(firstArr < item.age){
+    console.log(item.age);
+    
+    
+    return firstArr = item.age;
+  }
+})
+console.log(firstArr);
+
