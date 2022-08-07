@@ -88,20 +88,19 @@ console.log(result);
 //     { name: "Bob", age: 30 },
 //   ],
 // ];
-
-array.forEach(function (item) {
-  // console.log(item)
-});
-let firstArr = 0;
-let arrayMax = array.filter(function(item,index,arr){
-  //  console.log(arr[0].age)
-  firstArr = arr[0].age;
-  if(firstArr < item.age){
-    console.log(item.age);
-    
-    
-    return firstArr = item.age;
-  }
+//方法二
+let noRepeat = resultMap.filter(function (item, index, arr) {
+  return arr.indexOf(item) === index;
 })
-console.log(firstArr);
+console.log(arrayMax);
+// console.log(noRepeat); 
+console.log(noRepeat.length)
+
+let group = noRepeat.map(function(age){
+  let arrAge = array.filter(function(item){
+    return item.age === age;
+  })
+  return arrAge;
+});
+console.log(group);
 
