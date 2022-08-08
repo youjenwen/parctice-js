@@ -15,4 +15,4 @@ function makeStars(n){
     let str = arrResult.join("\\n");//要兩個\\才會顯示一個\
     console.log(str)
 }
-makeStars(3)
+makeStars(3);
