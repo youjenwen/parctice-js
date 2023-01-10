@@ -92,7 +92,7 @@ console.log(result);
 let noRepeat = resultMap.filter(function (item, index, arr) {
   return arr.indexOf(item) === index;
 })
-console.log(arrayMax);
+//console.log(arrayMax);
 // console.log(noRepeat); 
 console.log(noRepeat.length)
 
